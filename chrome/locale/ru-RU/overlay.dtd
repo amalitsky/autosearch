@@ -1,0 +1,226 @@
+<!ENTITY asToolbarButton.label "АвтоПоиск">
+<!ENTITY asToolbarButton.tooltip "АвтоПоиск">
+<!ENTITY asSidebar.label "АвтоПоиск">
+<!ENTITY asToolbar.name  "АвтоПоиск">
+<!ENTITY asToolbar.label "АвтоПоиск">
+
+<!ENTITY as.tab.form "форма">
+<!ENTITY as.tab.mySearch "мой поиск">
+
+<!ENTITY as.discard.link "сбросить">
+<!ENTITY as.discard.hint "установить настройки формы на значения по умолчанию">
+<!ENTITY as.clear.link "очистить">
+<!ENTITY as.clear.hint "полностью очистить форму">
+<!ENTITY as.settings.link "настройки">
+<!ENTITY as.settings.hint "настройка скрытых полей формы и прочее">
+
+<!ENTITY as.brand.every "любая марка">
+<!ENTITY as.model.every "любая модель">
+<!ENTITY as.brand.russian "отечественные">
+<!ENTITY as.brand.foreign "иномарки">
+<!ENTITY as.bodyt.every "любой кузов">
+<!ENTITY as.bodyt.sedan "седан">
+<!ENTITY as.bodyt.hatch "хэтчбек">
+<!ENTITY as.bodyt.3door "  - трёхдверный">
+<!ENTITY as.bodyt.5door "  - пятидверный">
+<!ENTITY as.bodyt.univers "универсал">
+<!ENTITY as.bodyt.jeep "внедорожник">
+<!ENTITY as.bodyt.coupe "купе">
+<!ENTITY as.bodyt.minivan "минивэн">
+<!ENTITY as.bodyt.cabri "кабриолет">
+<!ENTITY as.bodyt.pickup "пикап">
+<!ENTITY as.bodyt.limo "лимузин">
+<!ENTITY as.bodyt.roadster "родстер">
+<!ENTITY as.region_id.every "в любом регионе">
+<!ENTITY as.city_id.every "любой город">
+<!ENTITY as.year.label "год:">
+<!ENTITY as.year.hint "годы выпуска (от и до)">
+<!ENTITY as.year.clear "сбросить выбранные годы выпуска">
+<!ENTITY as.yars.set.1 "до 3 лет">
+<!ENTITY as.yars.set.2 "3–5 лет">
+<!ENTITY as.yars.set.3 "5–7 лет">
+<!ENTITY as.yars.set.4 "7–10 лет">
+<!ENTITY as.price.label "цена:">
+<!ENTITY as.price.hint "цена (от и до) в валюте, выбранной в соответствующем поле">
+<!ENTITY as.price.clear "сбросить диапазон цен">
+<!ENTITY as.run.label "пробег:">
+<!ENTITY as.run.hint "диапазон заявленного пробега">
+<!ENTITY as.run.clear "сбросить значения пробега">
+<!ENTITY as.volume.label "объём:">
+<!ENTITY as.volume.hint "диапазон объёма двигателя в кубических сантиметрах">
+<!ENTITY as.volume.clear "сбросить выбранные значения объёма">
+<!ENTITY as.power.label "сил:">
+<!ENTITY as.power.hint "мощность двигателя (от и до) в лошадиных силах">
+<!ENTITY as.power.clear "сбросить выбранный диапазон сил">
+<!ENTITY as.gear.every "любая коробка">
+<!ENTITY as.gear.hint "тип коробки передач">
+<!ENTITY as.gear.mech "механическая">
+<!ENTITY as.gear.auto "автоматическая">
+<!ENTITY as.gear.akpp "АКПП">
+<!ENTITY as.gear.var "вариатор">
+<!ENTITY as.gear.robo "робот">
+<!ENTITY as.wheel.hint "с какой стороны руль">
+<!ENTITY as.wheel.every "любой руль">
+<!ENTITY as.wheel.left "левый">
+<!ENTITY as.wheel.right "правый">
+<!ENTITY as.drvGear.label "тип привода автомобиля">
+<!ENTITY as.drvGear.every "любой привод">
+<!ENTITY as.drvGear.forw "передний">
+<!ENTITY as.drvGear.back "задний">
+<!ENTITY as.drvGear.full "полный">
+<!ENTITY as.engType.hint "тип двигателя">
+<!ENTITY as.engType.every "любой движок">
+<!ENTITY as.engType.benz "бенз. инжектор">
+<!ENTITY as.engType.benzKarb "бенз. карбюратор">
+<!ENTITY as.engType.benzRotor "бенз. ротор">
+<!ENTITY as.engType.benzKompr "бенз. компрессор">
+<!ENTITY as.engType.benzTurb "бенз. турбонаддув">
+<!ENTITY as.engType.diesel "дизель">
+<!ENTITY as.engType.disTurbo "диз. турбонаддув">
+<!ENTITY as.engType.hybrBenz "гибридный бензин">
+<!ENTITY as.engType.hybrDiesel "гибридный дизель">
+<!ENTITY as.cond.hint "текущее состояние автомобиля">
+<!ENTITY as.cond.every "любое состояние">
+<!ENTITY as.cond.ok "все кроме битых">
+<!ENTITY as.cond.super "отличное">
+<!ENTITY as.cond.good "хорошее">
+<!ENTITY as.cond.middle "среднее">
+<!ENTITY as.cond.toRepair "требует ремонта">
+<!ENTITY as.cust.hint "статус растоможенности автомобиля">
+<!ENTITY as.cust.every "растаможка: любая">
+<!ENTITY as.cust.yes "растаможена">
+<!ENTITY as.cust.no "нерастаможена">
+<!ENTITY as.owners.hint "количество владельцев по записям в ПТС">
+<!ENTITY as.owners.every "вл. по птс: не важно">
+<!ENTITY as.owners.one "один владелец">
+<!ENTITY as.owners.two "два владельца">
+<!ENTITY as.owners.three "три и более">
+<!ENTITY as.change.hint "возможность обмена авто">
+<!ENTITY as.change.every "можно и в обмен">
+<!ENTITY as.change.no "не интересует">
+<!ENTITY as.change.expenc "на авто дороже">
+<!ENTITY as.change.cheap "на авто дешевле">
+<!ENTITY as.change.vars "варианты">
+<!ENTITY as.curr.hint "в какой валюте идёт поиск и отображение цен">
+<!ENTITY as.curr.rur "цены в рублях">
+<!ENTITY as.curr.usd "цены в долларах">
+<!ENTITY as.curr.eur "цены в евро">
+<!ENTITY as.seller.hint "тип продавца">
+<!ENTITY as.seller.every "любой продавец">
+<!ENTITY as.seller.fiz "продаёт физ. лицо">
+<!ENTITY as.seller.ur "продаёт юр. лицо">
+<!ENTITY as.pubDates.hint "срок публикации объявления">
+<!ENTITY as.pubDates.whole "за всё время">
+<!ENTITY as.pubDates.today "за сегодня">
+<!ENTITY as.pubDates.twoDays "за два дня">
+<!ENTITY as.pubDates.threeDays "за три дня">
+<!ENTITY as.pubDates.week "за неделю">
+<!ENTITY as.pubDates.twoWeeks "за две недели">
+<!ENTITY as.pubDates.threeWeeks "за три недели">
+<!ENTITY as.pubDates.month "за месяц">
+<!ENTITY as.avail.hint "наличие автомобиля у продавца">
+<!ENTITY as.avail.every "наличие не важно">
+<!ENTITY as.avail.yes "авто в наличии">
+<!ENTITY as.avail.byOrder "авто на заказ">
+<!ENTITY as.avail.onTrip "авто в пути">
+<!ENTITY as.output.hint "форма вывода результатов поиска">
+<!ENTITY as.output.table "вывод таблицей">
+<!ENTITY as.output.text "вывод текстом">
+<!ENTITY as.sortBy.hint "сортировка результатов поиска">
+<!ENTITY as.sortBy.model "сорт. по модели">
+<!ENTITY as.sortBy.price "сорт. по цене">
+<!ENTITY as.sortBy.year "сорт. по году">
+<!ENTITY as.sortBy.run "сорт. по пробегу">
+<!ENTITY as.hasPhoto "только с фото">
+<!ENTITY as.hasCert "сертификат ТС">
+<!ENTITY as.but.save "сохранить">
+<!ENTITY as.but.send "искать">
+<!ENTITY as.saveAsDefaults "сохранить как настройки по умолчанию">
+<!ENTITY as.saveAsDefaults.hint "Значения по умолчанию используются при сбросе формы и для подставления значений в скрытые поля.">
+
+<!ENTITY as.brand.vaz "ВАЗ">
+<!ENTITY as.brand.gaz "ГАЗ">
+<!ENTITY as.brand.zaz "ЗАЗ">
+<!ENTITY as.brand.zil "ЗИЛ">
+<!ENTITY as.brand.ig "ИЖ">
+<!ENTITY as.brand.kamaz "КамАЗ">
+<!ENTITY as.brand.luaz "ЛУАЗ">
+<!ENTITY as.brand.azlk "Москвич (АЗЛК)">
+<!ENTITY as.brand.seaz "СеАЗ">
+<!ENTITY as.brand.smz "СМЗ">
+<!ENTITY as.brand.tagaz "ТагАЗ">
+<!ENTITY as.brand.uaz "УАЗ">
+<!ENTITY as.brand.exclusive "Эксклюзив">
+
+<!ENTITY as.color.every "цвет не важен">
+<!ENTITY as.color.beg "бежевый">
+<!ENTITY as.color.begMe "бежевый металлик">
+<!ENTITY as.color.bel "белый">
+<!ENTITY as.color.belMe "белый металлик">
+<!ENTITY as.color.golub "голубой">
+<!ENTITY as.color.golubMe "голубой металлик">
+<!ENTITY as.color.gelt "жёлтый">
+<!ENTITY as.color.geltMe "жёлтый металлик">
+<!ENTITY as.color.zel "зелёный">
+<!ENTITY as.color.zelMe "зелёный металлик">
+<!ENTITY as.color.zol "золотой">
+<!ENTITY as.color.zolMe "золотой металлик">
+<!ENTITY as.color.kor "коричневый">
+<!ENTITY as.color.korMe "коричневый металлик">
+<!ENTITY as.color.kra "красный">
+<!ENTITY as.color.kraMe "красный металлик">
+<!ENTITY as.color.ora "оранжевый">
+<!ENTITY as.color.oraMe "оранжевый металлик">
+<!ENTITY as.color.purp "пурпурный">
+<!ENTITY as.color.purpMe "пурпурный металлик">
+<!ENTITY as.color.roz "розовый">
+<!ENTITY as.color.rozMe "розовый металлик">
+<!ENTITY as.color.sereb "серебряный">
+<!ENTITY as.color.serebMe "серебряный металлик">
+<!ENTITY as.color.ser "серый">
+<!ENTITY as.color.serMe "серый металлик">
+<!ENTITY as.color.sin "синий">
+<!ENTITY as.color.sinMe "синий металлик">
+<!ENTITY as.color.fio "фиолетовый">
+<!ENTITY as.color.fioMe "фиолетовый металлик">
+<!ENTITY as.color.chern "чёрный">
+<!ENTITY as.color.chernMe "чёрный металлик">
+
+<!ENTITY as.country.every "в любой стране">
+<!ENTITY as.country.rus "Россия">
+<!ENTITY as.country.abh "Абхазия">
+<!ENTITY as.country.avstr "Австрия">
+<!ENTITY as.country.azer "Азербайджан">
+<!ENTITY as.country.belor "Белоруссия">
+<!ENTITY as.country.belg "Бельгия">
+<!ENTITY as.country.bolg "Болгария">
+<!ENTITY as.country.uk "Великобритания">
+<!ENTITY as.country.germ "Германия">
+<!ENTITY as.country.gruz "Грузия">
+<!ENTITY as.country.dan "Дания">
+<!ENTITY as.country.izr "Израиль">
+<!ENTITY as.country.ital "Италия">
+<!ENTITY as.country.kazah "Казахстан">
+<!ENTITY as.country.canad "Канада">
+<!ENTITY as.country.kor "Корея">
+<!ENTITY as.country.laos "Лаос">
+<!ENTITY as.country.lat "Латвия">
+<!ENTITY as.country.lit "Литва">
+<!ENTITY as.country.mold "Молдавия">
+<!ENTITY as.country.nider "Нидерланды">
+<!ENTITY as.country.oae "ОАЭ">
+<!ENTITY as.country.polsh "Польша">
+<!ENTITY as.country.usa "США">
+<!ENTITY as.country.taiw "Тайвань">
+<!ENTITY as.country.uzbek "Узбекистан">
+<!ENTITY as.country.ukr "Украина">
+<!ENTITY as.country.fin "Финляндия">
+<!ENTITY as.country.fr "Франция">
+<!ENTITY as.country.cheh "Чехия">
+<!ENTITY as.country.sweiz "Швейцария">
+<!ENTITY as.country.swed "Швеция">
+<!ENTITY as.country.est "Эстония">
+<!ENTITY as.country.jap "Япония">
+
+<!ENTITY as.options.link "определить комплектацию автомобиля">
+<!ENTITY as.options.hint "фильтры по комплектации автомобиля">

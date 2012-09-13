@@ -1,0 +1,495 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://as/skin/default.css" type="text/css" ?>
+<!DOCTYPE page SYSTEM "chrome://as/locale/overlay.dtd">
+<page id="asSidebar" title="&asSidebar.label;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+<vbox class="main" flex="1">
+<tabbox id="tablist">
+	<tabs id="tabs">
+		<tab label="&as.tab.form;" selected="true"/>
+		<tab label="&as.tab.mySearch;" oncommand="reqListLoad();"/>
+	</tabs>
+<tabpanels flex="1">
+    <tabpanel>
+		<vbox>
+		<hbox class="menu" align="right">
+			<label onclick="as.virt.db2form(997);" value="&as.discard.link;" tooltiptext='&as.discard.hint;'/>
+			<label class="red" onclick="as.virt.db2form(998);" value="&as.clear.link;" tooltiptext="&as.clear.hint;"/>
+			<label onclick="window.openDialog('chrome://as/content/prefWin.xul', 'asPref', 'chrome,titlebar,toolbar,centerscreen,modal');" value="&as.settings.link;" tooltiptext="&as.settings.hint;"/>
+		</hbox>
+		<hbox class="top">
+			<vbox class="left">
+				<menulist label="brand" id="brand" class="brand" oncommand="as.form.loadModels();" flex="1">
+					<menupopup>
+					<menuitem value="0" label="&as.brand.every;"/>
+					<menuitem value="-1" label="&as.brand.russian;"/>
+					<menuitem value="-2" label="&as.brand.foreign;"/>
+					<menuitem value="1" label="AC"/>
+					<menuitem value="5" label="Acura"/>
+					<menuitem value="7" label="Alfa Romeo"/>
+					<menuitem value="8" label="Alpina"/>
+					<menuitem value="11" label="Aro"/>
+					<menuitem value="12" label="Asia"/>
+					<menuitem value="14" label="Aston Martin"/>
+					<menuitem value="15" label="Audi"/>
+					<menuitem value="16" label="Austin"/>
+					<menuitem value="25" label="Bentley"/>
+					<menuitem value="30" label="BMW"/>
+					<menuitem value="671" label="Brilliance"/>
+					<menuitem value="1274" label="Bufori"/>
+					<menuitem value="36" label="Bugatti"/>
+					<menuitem value="37" label="Buick"/>
+					<menuitem value="40" label="BYD"/>
+					<menuitem value="41" label="Cadillac"/>
+					<menuitem value="1471" label="Carver"/>
+					<menuitem value="45" label="Caterham"/>
+					<menuitem value="646" label="ChangFeng"/>
+					<menuitem value="48" label="Chery"/>
+					<menuitem value="49" label="Chevrolet"/>
+					<menuitem value="50" label="Chrysler"/>
+					<menuitem value="52" label="Citroen"/>
+					<menuitem value="59" label="Dacia"/>
+					<menuitem value="60" label="Dadi"/>
+					<menuitem value="61" label="Daewoo"/>
+					<menuitem value="63" label="Daihatsu"/>
+					<menuitem value="64" label="Daimler"/>
+					<menuitem value="67" label="De Lorean"/>
+					<menuitem value="69" label="Derways"/>
+					<menuitem value="71" label="Dodge"/>
+					<menuitem value="72" label="Doninvest"/>
+					<menuitem value="74" label="Eagle"/>
+					<menuitem value="77" label="FAW"/>
+					<menuitem value="79" label="Ferrari"/>
+					<menuitem value="80" label="Fiat"/>
+					<menuitem value="82" label="Ford"/>
+					<menuitem value="588" label="Foton"/>
+					<menuitem value="88" label="Geely"/>
+					<menuitem value="89" label="Geo"/>
+					<menuitem value="90" label="GMC"/>
+					<menuitem value="95" label="Great Wall"/>
+					<menuitem value="573" label="Hafei"/>
+					<menuitem value="2040" label="Haima"/>
+					<menuitem value="104" label="Honda"/>
+					<menuitem value="847" label="HuangHai"/>
+					<menuitem value="107" label="Hummer"/>
+					<menuitem value="1245" label="Hurtan"/>
+					<menuitem value="109" label="Hyundai"/>
+					<menuitem value="114" label="Infiniti"/>
+					<menuitem value="112" label="Iran Khodro"/>
+					<menuitem value="121" label="Isuzu"/>
+					<menuitem value="124" label="JAC"/>
+					<menuitem value="125" label="Jaguar"/>
+					<menuitem value="127" label="Jeep"/>
+					<menuitem value="1157" label="JMC"/>
+					<menuitem value="134" label="Kia"/>
+					<menuitem value="137" label="Koenigsegg"/>
+					<menuitem value="145" label="Lamborghini"/>
+					<menuitem value="146" label="Lancia"/>
+					<menuitem value="147" label="Land Rover"/>
+					<menuitem value="148" label="Landwind"/>
+					<menuitem value="152" label="Lexus"/>
+					<menuitem value="1627" label="Liebao Motor"/>
+					<menuitem value="645" label="Lifan"/>
+					<menuitem value="153" label="Lincoln"/>
+					<menuitem value="154" label="Lotus"/>
+					<menuitem value="156" label="LTI"/>
+					<menuitem value="160" label="Mahindra"/>
+					<menuitem value="164" label="Maserati"/>
+					<menuitem value="165" label="Maybach"/>
+					<menuitem value="166" label="Mazda"/>
+					<menuitem value="170" label="Mercedes-Benz"/>
+					<menuitem value="171" label="Mercury"/>
+					<menuitem value="173" label="Metrocab"/>
+					<menuitem value="174" label="MG"/>
+					<menuitem value="175" label="Microcar"/>
+					<menuitem value="177" label="Mini"/>
+					<menuitem value="181" label="Mitsubishi"/>
+					<menuitem value="182" label="Mitsuoka"/>
+					<menuitem value="185" label="Morgan"/>
+					<menuitem value="191" label="Nissan"/>
+					<menuitem value="192" label="Noble"/>
+					<menuitem value="196" label="Oldsmobile"/>
+					<menuitem value="197" label="Opel"/>
+					<menuitem value="200" label="Pagani"/>
+					<menuitem value="205" label="Peugeot"/>
+					<menuitem value="206" label="Plymouth"/>
+					<menuitem value="207" label="Pontiac"/>
+					<menuitem value="208" label="Porsche"/>
+					<menuitem value="211" label="Proton"/>
+					<menuitem value="212" label="PUCH"/>
+					<menuitem value="217" label="Renault"/>
+					<menuitem value="219" label="Rolls-Royce"/>
+					<menuitem value="221" label="Rover"/>
+					<menuitem value="222" label="Saab"/>
+					<menuitem value="223" label="Saleen"/>
+					<menuitem value="226" label="Saturn"/>
+					<menuitem value="230" label="Scion"/>
+					<menuitem value="231" label="SEAT"/>
+					<menuitem value="670" label="ShuangHuan"/>
+					<menuitem value="236" label="Skoda"/>
+					<menuitem value="784" label="SMA"/>
+					<menuitem value="237" label="Smart"/>
+					<menuitem value="242" label="Spyker"/>
+					<menuitem value="243" label="Ssang Yong"/>
+					<menuitem value="246" label="Subaru"/>
+					<menuitem value="247" label="Suzuki"/>
+					<menuitem value="250" label="Talbot"/>
+					<menuitem value="251" label="TATA"/>
+					<menuitem value="252" label="Tatra"/>
+					<menuitem value="254" label="Tianma"/>
+					<menuitem value="255" label="Tianye"/>
+					<menuitem value="260" label="Toyota"/>
+					<menuitem value="261" label="Trabant"/>
+					<menuitem value="265" label="TVR"/>
+					<menuitem value="268" label="Vauxhall"/>
+					<menuitem value="273" label="Volkswagen"/>
+					<menuitem value="274" label="Volvo"/>
+					<menuitem value="534" label="Vortex"/>
+					<menuitem value="276" label="Wartburg"/>
+					<menuitem value="280" label="Wiesmann"/>
+					<menuitem value="278" label="Westfield"/>
+					<menuitem value="282" label="Xin Kai"/>
+					<menuitem value="780" label="ZX"/>
+					</menupopup>	
+				</menulist>
+				<html:select id="model" multiple="multiple" class="model" onchange="as.form.onModelsChange();">
+					<html:option value="0">&as.model.every;</html:option>
+				</html:select>
+			</vbox>
+			<vbox>
+				<menulist control="bodyt" id="bodyt">
+					<menupopup>
+					<menuitem value="0" label="&as.bodyt.every;" selected="true"/>
+					<menuitem value="120" label="&as.bodyt.sedan;"/>
+					<menuitem value="121" label="&as.bodyt.hatch;"/>
+					<menuitem value="3121" label="&as.bodyt.3door;"/>
+					<menuitem value="5121" label="&as.bodyt.5door;"/>
+					<menuitem value="119" label="&as.bodyt.univers;"/>
+					<menuitem value="124" label="&as.bodyt.jeep;"/>
+					<menuitem value="3124" label="&as.bodyt.3door;"/>
+					<menuitem value="5124" label="&as.bodyt.5door;"/>
+					<menuitem value="122" label="&as.bodyt.coupe;"/>
+					<menuitem value="125" label="&as.bodyt.minivan;"/>
+					<menuitem value="123" label="&as.bodyt.cabri;"/>
+					<menuitem value="128" label="&as.bodyt.pickup;"/>
+					<menuitem value="126" label="&as.bodyt.limo;"/>
+					<menuitem value="1104" label="&as.bodyt.roadster;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="color">
+					<menupopup>
+						<menuitem value="0" label="&as.color.every;"/>
+						<menuitem value="2" label="&as.color.beg;"/>
+						<menuitem value="3" label="&as.color.begMe;"/>
+						<menuitem value="4" label="&as.color.bel;"/>
+						<menuitem value="5" label="&as.color.belMe;"/>
+						<menuitem value="6" label="&as.color.golub;"/>
+						<menuitem value="7" label="&as.color.golubMe;"/>
+						<menuitem value="8" label="&as.color.gelt;"/>
+						<menuitem value="9" label="&as.color.geltMe;"/>
+						<menuitem value="10" label="&as.color.zel;"/>
+						<menuitem value="11" label="&as.color.zelMe;"/>
+						<menuitem value="12" label="&as.color.zol;"/>
+						<menuitem value="13" label="&as.color.zolMe;"/>
+						<menuitem value="14" label="&as.color.kor;"/>
+						<menuitem value="15" label="&as.color.korMe;"/>
+						<menuitem value="16" label="&as.color.kra;"/>
+						<menuitem value="17" label="&as.color.kraMe;"/>
+						<menuitem value="18" label="&as.color.ora;"/>
+						<menuitem value="19" label="&as.color.oraMe;"/>
+						<menuitem value="20" label="&as.color.purp;"/>
+						<menuitem value="21" label="&as.color.purpMe;"/>
+						<menuitem value="32" label="&as.color.roz;"/>
+						<menuitem value="33" label="&as.color.rozMe;"/>
+						<menuitem value="22" label="&as.color.sereb;"/>
+						<menuitem value="23" label="&as.color.serebMe;"/>
+						<menuitem value="24" label="&as.color.ser;"/>
+						<menuitem value="25" label="&as.color.serMe;"/>
+						<menuitem value="26" label="&as.color.sin;"/>
+						<menuitem value="27" label="&as.color.sinMe;"/>
+						<menuitem value="28" label="&as.color.fio;"/>
+						<menuitem value="29" label="&as.color.fioMe;"/>
+						<menuitem value="30" label="&as.color.chern;"/>
+						<menuitem value="31" label="&as.color.chernMe;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="country" oncommand="as.form.loadRegions();">
+				<menupopup>		
+					<menuitem value="0" label="&as.country.every;"/>
+					<menuitem value="1" label="&as.country.rus;"/>
+					<menuitem value="36" label="&as.country.abh;"/>
+					<menuitem value="12" label="&as.country.avstr;"/>
+					<menuitem value="21" label="&as.country.azer;"/>
+					<menuitem value="2" label="&as.country.belor;"/>
+					<menuitem value="17" label="&as.country.belg;"/>
+					<menuitem value="34" label="&as.country.bolg;"/>
+					<menuitem value="28" label="&as.country.uk;"/>
+					<menuitem value="6" label="&as.country.germ;"/>
+					<menuitem value="15" label="&as.country.gruz;"/>
+					<menuitem value="16" label="&as.country.dan;"/>
+					<menuitem value="33" label="&as.country.izr;"/>
+					<menuitem value="20" label="&as.country.ital;"/>
+					<menuitem value="13" label="&as.country.kazah;"/>
+					<menuitem value="9" label="&as.country.canad;"/>
+					<menuitem value="30" label="&as.country.kor;"/>
+					<menuitem value="38" label="&as.country.laos;"/>
+					<menuitem value="11" label="&as.country.lat;"/>
+					<menuitem value="5" label="&as.country.lit;"/>
+					<menuitem value="18" label="&as.country.mold;"/>
+					<menuitem value="22" label="&as.country.nider;"/>
+					<menuitem value="27" label="&as.country.oae;"/>
+					<menuitem value="29" label="&as.country.polsh;"/>
+					<menuitem value="8" label="&as.country.usa;"/>
+					<menuitem value="37" label="&as.country.taiw;"/>
+					<menuitem value="14" label="&as.country.uzbek;"/>
+					<menuitem value="3" label="&as.country.ukr;"/>
+					<menuitem value="4" label="&as.country.fin;"/>
+					<menuitem value="10" label="&as.country.fr;"/>
+					<menuitem value="19" label="&as.country.cheh;"/>
+					<menuitem value="35" label="&as.country.sweiz;"/>
+					<menuitem value="23" label="&as.country.swed;"/>
+					<menuitem value="7" label="&as.country.est;"/>
+					<menuitem value="31" label="&as.country.jap;"/>
+				</menupopup>
+				</menulist>
+				<html:select id="region_id" multiple="multiple" disabled="disabled" class="region" onchange="as.form.onRegionChange();">
+					<html:option value="0">&as.region_id.every;</html:option>
+				</html:select>
+				<menulist id="city_id" disabled="true">
+					<menupopup>
+					<menuitem value="0" label="&as.city_id.every;"/>
+					</menupopup>
+				</menulist>
+			</vbox>
+		</hbox>
+		<vbox class="quad">
+			<hbox id="year">
+				<label class="def" value="&as.year.label;" control="yFrom" tooltiptext="&as.year.hint;"/>
+				<menulist id="yFrom" class="year" control="yFrom" onselect="try{ as.form.yearToUpdate(); } catch(e){}" sizetopopup="always">
+					<menupopup>
+					<menuitem label=" " value="0"></menuitem>
+					</menupopup>
+				</menulist>
+				<label class="btw" control="yTo" value="-"/>
+				<menulist id="yTo" class="year" control="yTo" sizetopopup="always">
+					<menupopup>
+					<menuitem label=" " value="0"></menuitem>
+					</menupopup>
+				</menulist>
+				<spacer class="x" onclick="as.form.fields.yFrom.elem.selectedIndex = as.form.fields.yTo.elem.selectedIndex = 0;" tooltiptext="&as.year.clear;"/>
+			</hbox>
+			<hbox class="qSelect" id="quickYearsSelect">
+				<label flex="1" class="text-link" onclick="as.form.yearsSet(1,3);">&as.yars.set.1;</label>
+				<label flex="1" class="text-link" onclick="as.form.yearsSet(3,5);">&as.yars.set.2;</label>
+				<label flex="1" class="text-link" onclick="as.form.yearsSet(5,7);">&as.yars.set.3;</label>
+				<label flex="1" class="text-link" onclick="as.form.yearsSet(7,10);">&as.yars.set.4;</label>
+			</hbox>
+			<hbox id="price">
+				<label class="def" value="&as.price.label;" control="prFrom" tooltiptext="&as.price.hint;"/>
+				<menulist id="prFrom" control="prFrom" onkeyup="checkDigit(this);" onchange="as.form.priceToCheck();"  sizetopopup="always" editable="true">
+					<menupopup></menupopup>
+				</menulist>
+				<label class="btw" value="-" control="prTo"/>
+				<textbox id="prTo" control="prTo" onkeyup="checkDigit(this);" onchange="as.form.priceToCheck();"/>
+				<spacer class="x" onclick="as.form.fields.prFrom.elem.value = as.form.fields.prTo.elem.value = '';" tooltiptext="&as.price.clear;"/>
+			</hbox>
+			<hbox id="run">
+				<label class="def" value="&as.run.label;" control="runFrom" tooltiptext="&as.run.hint;"/>
+				<textbox id="runFrom" control="runFrom"  onkeyup="checkDigit(this);" />
+				<label class="btw" value="-" control="runTo" flex="0"/>
+				<textbox id="runTo" control="runTo" onkeyup="checkDigit(this);"/>
+				<spacer class="x" onclick="as.form.fields.runFrom.elem.value=as.form.fields.runTo.elem.value='';" tooltiptext="&as.run.clear;"/>
+			</hbox>
+			<hbox id="volume">
+				<label class="def" value="&as.volume.label;" control="volFrom" tooltiptext="&as.volume.hint;"/>
+				<textbox id="volFrom" control="volTo" onkeyup="checkDigit(this);"/>
+				<label class="btw" value="-" control="volTo" flex="0"/>
+				<textbox id="volTo" control="volTo" onkeyup="checkDigit(this);"/>
+				<spacer class="x" onclick="as.form.fields.volFrom.elem.value=as.form.fields.volTo.elem.value='';" tooltiptext="&as.volume.clear;"/>
+			</hbox>
+			<hbox id="power">
+				<label class="def" value="&as.power.label;" control="powFrom" tooltiptext="&as.power.hint;"/>
+				<textbox id="powFrom" control="powFrom" onkeyup="checkDigit(this);"/>
+				<label class="btw" value="-" control="powTo" flex="0"/>
+				<textbox id="powTo" control="powTo" onkeyup="checkDigit(this);"/>
+				<spacer class="x" onclick="as.form.fields.powFrom.elem.value=as.form.fields.powTo.elem.value='';" tooltiptext="&as.power.clear;"/>
+			</hbox>
+		</vbox>	
+		<box class="doub">
+			<html:div>
+				<menulist id="gear" tooltiptext="&as.gear.hint;">
+					<menupopup>
+					<menuitem label="&as.gear.every;" value="0"/>
+					<menuitem label="&as.gear.mech;" value="1"/>
+					<menuitem label="&as.gear.auto;" value="99"/>
+					<menuitem label="&as.gear.akpp;" value="2"/>
+					<menuitem label="&as.gear.var;" value="3"/>
+					<menuitem label="&as.gear.robo;" value="4"/>
+					</menupopup>
+				</menulist>
+				<menulist id="wheel" tooltiptext="&as.wheel.hint;">
+				<menupopup>
+					<menuitem label="&as.wheel.every;" value="0"/>
+					<menuitem label="&as.wheel.left;" value="1"/>
+					<menuitem label="&as.wheel.right;" value="2"/>
+					</menupopup>
+				</menulist>
+				<menulist id="drvGear" tooltiptext="&as.drvGear.label;">
+					<menupopup>
+					<menuitem label="&as.drvGear.every;" value="0"/>
+					<menuitem label="&as.drvGear.forw;" value="2"/>
+					<menuitem label="&as.drvGear.back;" value="1"/>
+					<menuitem label="&as.drvGear.full;" value="3"/>
+					</menupopup>
+				</menulist>
+				<menulist id="engType" tooltiptext="&as.engType.hint;">
+					<menupopup>
+					<menuitem value="0" label="&as.engType.every;"/>
+					<menuitem value="1" label="&as.engType.benz;"/>
+					<menuitem value="2" label="&as.engType.benzKarb;"/>
+					<menuitem value="3" label="&as.engType.benzRotor;"/>
+					<menuitem value="7" label="&as.engType.benzKompr;"/>
+					<menuitem value="4" label="&as.engType.benzTurb;"/>
+					<menuitem value="5" label="&as.engType.diesel;"/>
+					<menuitem value="6" label="&as.engType.disTurbo;"/>
+					<menuitem value="8" label="&as.engType.hybrBenz;"/>
+					<menuitem value="9" label="&as.engType.hybrDiesel;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="cond" tooltiptext="&as.cond.hint;">
+					<menupopup>
+					<menuitem label="&as.cond.every;" value="0"/>		
+					<menuitem label="&as.cond.ok;" value="5"/>
+					<menuitem label="&as.cond.super;" value="1"/>
+					<menuitem label="&as.cond.good;" value="2"/>
+					<menuitem label="&as.cond.middle;" value="3"/>
+					<menuitem label="&as.cond.toRepair;" value="4"/>
+					</menupopup>
+				</menulist>
+				<menulist id="cust" tooltiptext="&as.cust.hint;">
+					<menupopup>
+					<menuitem value="0" label="&as.cust.every;"/>
+					<menuitem value="1" label="&as.cust.yes;"/>
+					<menuitem value="2" label="&as.cust.no;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="owners" tooltiptext="&as.owners.hint;">
+					<menupopup>
+					<menuitem label="&as.owners.every;" value="0"/>
+					<menuitem label="&as.owners.one;" value="1"/>
+					<menuitem label="&as.owners.two;" value="2"/>
+					<menuitem label="&as.owners.three;" value="3"/>
+					</menupopup>
+				</menulist>
+				<menulist id="change" tooltiptext="&as.change.hint;">
+					<menupopup>
+					<menuitem label="&as.change.every;" value="0"/>
+					<menuitem label="&as.change.no;" value="1"/>
+					<menuitem label="&as.change.expenc;" value="2"/>
+					<menuitem label="&as.change.cheap;" value="3"/>
+					<menuitem label="&as.change.vars;" value="4"/>
+					</menupopup>
+				</menulist>
+				<menulist id="currency_key" tooltiptext="&as.curr.hint;">
+					<menupopup>
+					<menuitem value="0" label="&as.curr.rur;"/>
+					<menuitem value="1" label="&as.curr.usd;"/>
+					<menuitem value="2" label="&as.curr.eur;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="seller" tooltiptext="&as.seller.hint;">
+					<menupopup>
+					<menuitem value="0" label="&as.seller.every;"/>
+					<menuitem value="1" label="&as.seller.fiz;"/>
+					<menuitem value="2" label="&as.seller.ur;"/>
+					</menupopup>
+				</menulist>
+				<menulist id="pubDates" tooltiptext="&as.pubDates.hint;">
+					<menupopup>
+					<menuitem label="&as.pubDates.whole;" value="0"/>
+					<menuitem label="&as.pubDates.today;" value="1"/>
+					<menuitem label="&as.pubDates.twoDays;" value="2"/>
+					<menuitem label="&as.pubDates.threeDays;" value="3"/>
+					<menuitem label="&as.pubDates.week;" value="7"/>
+					<menuitem label="&as.pubDates.twoWeeks;" value="14"/>
+					<menuitem label="&as.pubDates.threeWeeks;" value="31"/>
+					<menuitem label="&as.pubDates.month;" value="30"/>
+					</menupopup>
+				</menulist>
+				<menulist id="avail" tooltiptext="&as.avail.hint;">
+					<menupopup>
+					<menuitem label="&as.avail.every;" value="0"/>
+					<menuitem label="&as.avail.yes;" value="1"/>
+					<menuitem label="&as.avail.byOrder;" value="2"/>
+					<menuitem label="&as.avail.onTrip;" value="3"/>
+					</menupopup>
+				</menulist>
+				<menulist id="output" tooltiptext="&as.output.hint;">
+					<menupopup>
+					<menuitem label="&as.output.table;" value="0"/>
+					<menuitem label="&as.output.text;" value="1"/>
+					</menupopup>
+				</menulist>
+				<menulist id="sortBy" tooltiptext="&as.sortBy.hint;">
+					<menupopup>
+					<menuitem label="&as.sortBy.model;" value="0"/>
+					<menuitem label="&as.sortBy.price;" value="1"/>
+					<menuitem label="&as.sortBy.year;" value="2"/>
+					<menuitem label="&as.sortBy.run;" value="3"/>
+					</menupopup>
+				</menulist>
+				<hbox class="checkBox" id="hasPhotoBox">
+					<html:input type="checkbox" id="hasPhoto"/>
+					<spacer width="10"/>
+					<label value="&as.hasPhoto;" onclick="document.getElementById('hasPhoto').click();"/>
+				</hbox>
+				<hbox class="checkBox" id="hasCertBox">
+					<html:input type="checkbox" id="hasCert"/>
+					<spacer width="10"/>
+					<label value="&as.hasCert;" onclick="document.getElementById('hasCert').click();"/>
+				</hbox>
+				<vbox class="optLink">
+					<label class="text-link" onclick="window.openDialog('chrome://as/content/options.xul', 'asOptions', 'chrome,titlebar,toolbar,centerscreen,modal');" value="&as.options.link;" tooltiptext="&as.options.hint;"/>
+				</vbox>
+			</html:div>
+		</box>
+		<hbox class='botbut' flex="1">
+			<button label="&as.but.save;" id="save" oncommand="as.virt.save();"/>
+			<button label="&as.but.send;" id="submit" oncommand="as.virt.search();"/>
+		</hbox>
+		<vbox class="menu" align="right">
+			<label class="text-link" onclick="as.virt.saveAsDefaults();" value="&as.saveAsDefaults;" tooltiptext="&as.saveAsDefaults.hint;"/>
+			<label class="text-link" onclick="addButton();" value="проверка кнопки"/>
+		</vbox>
+	</vbox>
+	</tabpanel>
+	<tabpanel>
+		<vbox id="rList" class="rList"></vbox>
+	</tabpanel>
+</tabpanels>
+</tabbox>
+</vbox>
+<script src="sidebar.js" type="application/javascript;version=1.7"/>
+<script src="lib.js" type="application/javascript;version=1.7"/>
+<script src="list.js" type="application/javascript;version=1.7"/>
+<script src="form.js" type="application/javascript;version=1.7"/>
+<script src="virt.js" type="application/javascript;version=1.7"/>
+<script>
+	window.addEventListener("load", function (){
+		if (typeof as == 'undefined'){
+		window.as = new AS();
+		as.initBar();
+		as.virt = new Virt(as);
+		as.virt.init();
+		as.form = new Form(as);
+		as.form.init(as.virt.fields);
+		as.virt.db2form(999)}
+		else {alert('Автопоиск не может работать из-за занятой переменной "as".\nНапишите об этом на as@icode.ru с приложенным перечнем установленных плагинов.\nСпасибо.');}
+		})
+	window.addEventListener("unload", function(){
+		if (typeof(as) != 'undefined') { if (as.virt) {
+			as.virt.onClose()
+			as.cons.logStringMessage('нормально закрыли панель')}
+			}
+		})
+</script>
+</page>

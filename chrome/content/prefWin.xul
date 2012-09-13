@@ -1,0 +1,90 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://as/skin/prefWin.css" type="text/css" ?>
+<!DOCTYPE window SYSTEM "chrome://as/locale/prefWin.dtd">
+
+<prefwindow id="asPrefWin" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	onbeforeaccept="reloadAsSidebar();" ondialogcancel="reloadAsSidebar();">
+	<prefpane id="formFields" label="&aspref.form.pane;">
+		<preferences>
+			<preference id="form.years" name="extensions.as.form.yFrom" type="bool"/>
+			<preference id="form.color" name="extensions.as.form.color" type="bool"/>
+			<preference id="form.body" name="extensions.as.form.bodyt" type="bool"/>
+			<preference id="form.quickYearsSelect" name="extensions.as.form.quickYearsSelect" type="bool"/>
+			<preference id="form.price" name="extensions.as.form.prFrom" type="bool"/>
+			<preference id="form.run" name="extensions.as.form.runFrom" type="bool"/>
+			<preference id="form.volume" name="extensions.as.form.volFrom" type="bool"/>
+			<preference id="form.power" name="extensions.as.form.powFrom" type="bool"/>
+			<preference id="form.gearBox" name="extensions.as.form.gear" type="bool"/>
+			<preference id="form.wheel" name="extensions.as.form.wheel" type="bool"/>
+			<preference id="form.drvGear" name="extensions.as.form.drvGear" type="bool"/>
+			<preference id="form.engine" name="extensions.as.form.engType" type="bool"/>
+			<preference id="form.condition" name="extensions.as.form.cond" type="bool"/>
+			<preference id="form.customs" name="extensions.as.form.cust" type="bool"/>
+			<preference id="form.owners" name="extensions.as.form.owners" type="bool"/>
+			<preference id="form.change" name="extensions.as.form.change" type="bool"/>
+			<preference id="form.currency" name="extensions.as.form.currency_key" type="bool"/>
+			<preference id="form.seller" name="extensions.as.form.seller" type="bool"/>
+			<preference id="form.pubDates" name="extensions.as.form.pubDates" type="bool"/>
+			<preference id="form.avail" name="extensions.as.form.avail" type="bool"/>
+			<preference id="form.output" name="extensions.as.form.output" type="bool"/>
+			<preference id="form.sortBy" name="extensions.as.form.sortBy" type="bool"/>
+			<preference id="form.photo" name="extensions.as.form.hasPhoto" type="bool"/>
+			<preference id="form.sert" name="extensions.as.form.hasCert" type="bool"/>
+		</preferences>
+		<label value="&aspref.form.desc1;"/>
+		<label value="&aspref.form.desc2;"/>
+		<spacer height="15"/>
+		<hbox>
+			<vbox>
+				<checkbox preference="form.years" label="&aspref.form.years;"/>
+				<checkbox preference="form.color" label="&aspref.form.color;"/>
+				<checkbox preference="form.body" label="&aspref.form.body;"/>
+				<checkbox preference="form.quickYearsSelect" label="&aspref.form.quickYearsSelect;"/>
+				<checkbox preference="form.price" label="&aspref.form.price;"/>
+				<checkbox preference="form.run" label="&aspref.form.run;"/>
+				<checkbox preference="form.volume" label="&aspref.form.volume;"/>
+				<checkbox preference="form.power" label="&aspref.form.power;"/>
+			</vbox>
+			<vbox>
+				<checkbox preference="form.gearBox" label="&aspref.form.gearBox;"/>
+				<checkbox preference="form.wheel" label="&aspref.form.wheel;"/>
+				<checkbox preference="form.drvGear" label="&aspref.form.drvGear;"/>
+				<checkbox preference="form.engine" label="&aspref.form.engine;"/>
+				<checkbox preference="form.condition" label="&aspref.form.condition;"/>
+				<checkbox preference="form.customs" label="&aspref.form.customs;"/>
+				<checkbox preference="form.owners" label="&aspref.form.owners;"/>
+				<checkbox preference="form.change" label="&aspref.form.change;"/>
+			</vbox>
+			<vbox>
+				<checkbox preference="form.currency" label="&aspref.form.currency;"/>
+				<checkbox preference="form.seller" label="&aspref.form.seller;"/>
+				<checkbox preference="form.pubDates" label="&aspref.form.pubDates;"/>
+				<checkbox preference="form.avail" label="&aspref.form.avail;"/>
+				<checkbox preference="form.output" label="&aspref.form.output;"/>
+				<checkbox preference="form.sortBy" label="&aspref.form.sortBy;"/>
+				<checkbox preference="form.photo" label="&aspref.form.photo;"/>
+				<checkbox preference="form.sert" label="&aspref.form.sert;"/>
+				<checkbox id="allCheck" label="&aspref.form.allCheck;" class="green" onclick="checkAllPanePrefs(this, 'formFields');"/>
+			</vbox>
+		</hbox>
+	</prefpane>
+
+	<prefpane id="main" label="&aspref.pane1name;">
+		<preferences>
+		  <preference id="listDelConfirm" name="extensions.as.listDelConfirm" type="bool"/>
+		</preferences>
+		<checkbox preference="listDelConfirm" label="&aspref.prop1;" />
+	</prefpane>
+	
+	<script src="lib.js"/>
+	
+	<!--<prefpane id="mail" label="&aspref.pane2name;">
+		<preferences>
+			<preference id="mailbox" name="extensions.as.mailBoxAdress" type="string"/>
+		</preferences>
+		<label>&aspref.mailbox.label;</label>
+		<textbox preference="mailbox" label="&aspr.mail.prop1;"/>
+	</prefpane>-->
+	
+</prefwindow>

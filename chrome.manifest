@@ -1,0 +1,6 @@
+resource modules chrome/modules/
+content as chrome/content/
+skin as classic/1.0 chrome/skin/
+locale    as   ru-RU         chrome/locale/ru-RU/
+overlay   chrome://browser/content/browser.xul   chrome://as/content/ff-overlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://as/skin/overlay.css

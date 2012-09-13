@@ -1,0 +1,37 @@
+<!ENTITY aspref.pane1name "Общие">
+<!ENTITY aspref.pane2name "Подписка">
+
+<!ENTITY aspref.prop1 "Запрашивать подтверждение перед удалением поискового фильтра">
+<!ENTITY aspref.mailbox.label "Электронный адрес для получения подписки">
+<!ENTITY aspr.mail.prop1 "Адрес электронной почты">
+
+<!ENTITY aspref.form.pane "Поля формы">
+<!ENTITY aspref.form.years "Года выпуска">
+<!ENTITY aspref.form.color "Цвет автомобиля">
+<!ENTITY aspref.form.body "Тип кузова">
+<!ENTITY aspref.form.quickYearsSelect "панель быстрого выбора годов">
+<!ENTITY aspref.form.price "Диапазон цен">
+<!ENTITY aspref.form.run "Диапазон пробега">
+<!ENTITY aspref.form.volume "Объём двигателя">
+<!ENTITY aspref.form.power "Мощность">
+<!ENTITY aspref.form.gearBox "Тип коробки передач">
+<!ENTITY aspref.form.wheel "Расположение руля">
+<!ENTITY aspref.form.drvGear "Тип привода">
+<!ENTITY aspref.form.engine "Тип двигателя">
+<!ENTITY aspref.form.condition "Состояние автомобиля">
+<!ENTITY aspref.form.customs "Растаможен/не растоможен">
+<!ENTITY aspref.form.owners "Количество владельцев">
+<!ENTITY aspref.form.change "Обмен">
+<!ENTITY aspref.form.seller "Тип продавца">
+<!ENTITY aspref.form.currency "Выбор валюты">
+<!ENTITY aspref.form.pubDates "Давность объявления">
+<!ENTITY aspref.form.avail "Наличие авто">
+<!ENTITY aspref.form.output "Формат вывода результатов">
+<!ENTITY aspref.form.sortBy "Сортировка результатов">
+<!ENTITY aspref.form.photo "Фото">
+<!ENTITY aspref.form.sert "Сертификат ТС">
+<!ENTITY aspref.form.allCheck "всё сразу">
+
+
+<!ENTITY aspref.form.desc1 "Если вы не пользуетесь всеми полями формы поиска, отключите ненужные, сняв галочку.">
+<!ENTITY aspref.form.desc2 "Значения скрытых таким образом полей определяются настройками по умолчанию.">

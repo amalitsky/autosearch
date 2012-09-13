@@ -1,0 +1,59 @@
+page{ font-size:12px; padding-top:2px; background-color:#eeeeee }
+
+tabs{ font-size:12px }
+tabpanels{ padding:0; margin:0 }
+tabpanel{ max-width: 355px; background-color:#eeeeee }
+menulist, label, listbox, textbox{ font-family:Verdana }
+select{ font-size:13px }
+menupopup{ max-height:300px }
+table{ margin:0; padding:0; border-collapse:collapse }
+menulist{ height:25px; max-height:25px; min-height:25px; font-size: 12px }
+textbox{ height: 22px }
+.red { color: red }
+
+vbox.main{ overflow-x:hidden; overflow-y:auto }
+
+.menu { max-width:349px; background-color:white; padding:2px 0 5px 0; border:1px solid #DDDDDD; border-left:none; color:navy }
+.menu label{ margin-right:1em; text-decoration: underline }
+vbox.menu label{ margin:.1em 1em .1em 0}
+vbox.optLink {
+	width:349px; height:22px;
+	padding-top:2px;
+	background-color:white; 
+	text-align:center;
+	text-decoration:underline;
+	color:navy;
+	border:1px solid #DDDDDD 
+	}
+
+
+table.quad, table.double, table.reqList{ width:355px }
+
+hbox.top menulist, hbox.top select{ width: 170px; max-width:170px; margin:2px 0px 3px 3px}
+hbox.top vbox.left{ margin-right:-5px }
+
+menulist.brand menupopup { max-height:570; min-width:140 }
+select.model{ height:172px }
+select.region{ height:85px }
+select option{ width:150px }
+
+vbox.quad label { margin-top:5px }
+vbox.quad label.def { width:70px; padding-left:1em }
+vbox.quad label.btw { width:10px }
+vbox.quad menulist, vbox.quad textbox { width:120px; min-height:25px }
+
+spacer.x {width:10px; height:10px; background-image: url('/skin/x10.png'); background-repeat:no-repeat; background-position:0 9px }
+
+vbox.quad hbox.qSelect { height:20px; color:navy }
+vbox.quad hbox.qSelect label{ padding-left:1em; margin:2px 0 0 0}
+
+box.doub div{ width:355px }
+box.doub menulist { width: 170px; margin:2px 3px; display:inline }
+box.doub hbox.checkBox { width:177px; margin:0; padding:0 0 0 1.5em }
+box.doub hbox.checkBox label { padding-top: 2px }
+
+hbox.botbut button { width:170px; margin:4px 3px; min-height:28px }
+
+vbox.rList image{ margin:0 3px; padding:0; min-width:16px; max-width:16px; width:16px; min-height:16px;	max-height:16px; height:16px }
+vbox.rList hbox{ min-height:25px; padding:4px }
+vbox.rList hbox label{ margin-left:.4em; font-size:13px }	

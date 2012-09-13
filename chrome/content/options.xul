@@ -1,0 +1,139 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://as/skin/options.css" type="text/css" ?>
+<!DOCTYPE dialog SYSTEM "chrome://as/locale/options.dtd">
+<dialog title="&as.opts.title;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml" onload="sizeToContent();opt = new optWin(window.opener); opt.init()"  ondialogaccept="opt.toVirt()">
+	<script src="lib.js"/><script src="options.js"/><script src="form.js"/>
+	<dialogheader title="&as.opts.title;"/>
+	<groupbox title="&as.opts.sec.title;" orient="vertical">
+		<hbox>
+			<menulist id="opt_srs" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.srs.opt1;"/>
+				<menuitem value="1" label="&as.opts.srs.opt2;"/>
+				<menuitem value="2" label="&as.opts.srs.opt3;"/>
+				<menuitem value="3" label="&as.opts.srs.opt4;"/>
+				</menupopup>
+			</menulist>
+			<checkbox id="opt_sec" name="option" label="&as.opts.sec;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_abs" name="option" label="&as.opts.abs;"/>
+			<checkbox id="opt_tcs" name="option" label="&as.opts.tcs;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_esp" name="option" label="&as.opts.esp;"/>
+			<checkbox id="opt_ksen" name="option" label="&as.opts.ksen;"/>
+		</hbox>
+	</groupbox>
+	<groupbox title="&as.opts.comf.title;" orient="vertical">
+		<hbox>
+			<menulist id="opt_gur" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.gur.opt1;"/>
+				<menuitem value="1" label="&as.opts.gur.opt2;"/>
+				<menuitem value="2" label="&as.opts.gur.opt3;"/>
+				</menupopup>
+			</menulist>
+			<menulist id="opt_av" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.av.opt1;"/>
+				<menuitem value="1" label="&as.opts.av.opt2;"/>
+				<menuitem value="2" label="&as.opts.av.opt3;"/>
+				<menuitem value="3" label="&as.opts.av.opt4;"/>
+				<menuitem value="4" label="&as.opts.av.opt5;"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<hbox>
+			<menulist id="opt_cond" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.cond.opt1;"/>
+				<menuitem value="1" label="&as.opts.cond.opt2;"/>
+				<menuitem value="2" label="1&as.opts.cond.opt3;"/>
+				<menuitem value="3" label="2&as.opts.cond.opt3;"/>
+				<menuitem value="4" label="3&as.opts.cond.opt3;"/>
+				</menupopup>
+			</menulist>
+			<checkbox id="opt_omivFar" name="option" label="&as.opts.omivFar;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_elZerk" name="option" label="&as.opts.elZerk;"/>
+			<checkbox id="opt_luk" name="option" label="&as.opts.luk;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_dd" name="option" label="&as.opts.dd;"/>
+			<checkbox id="opt_ds" name="option" label="&as.opts.ds;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_obogZerk" name="option" label="&as.opts.obogZerk;"/>
+			<checkbox id="opt_park" name="option" label="&as.opts.park;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_pc" name="option" label="&as.opts.pc;"/>
+			<checkbox id="opt_cz" name="option" label="&as.opts.cz;"/>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_disks" name="option" label="&as.opts.disks;"/>
+			<checkbox id="opt_gbo" name="option" label="&as.opts.gbo;"/>
+		</hbox>
+		<checkbox id="opt_cruize" name="option" label="&as.opts.cruize;"/>
+	</groupbox>
+	<groupbox title="&as.opts.int.title;" orient="vertical">
+		<hbox>
+			<menulist id="opt_int" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.int.opt1;"/>
+				<menuitem value="1" label="&as.opts.int.opt2;"/>
+				<menuitem value="2" label="&as.opts.int.opt3;"/>
+				<menuitem value="3" label="&as.opts.int.opt4;"/>
+				<menuitem value="4" label="&as.opts.int.opt5;"/>
+				</menupopup>
+			</menulist>
+			<menulist id="opt_intColor" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.intColor.opt1;"/>
+				<menuitem value="1" label="&as.opts.intColor.opt2;"/>
+				<menuitem value="2" label="&as.opts.intColor.opt3;"/>
+			</menupopup>
+</menulist>
+		</hbox>
+		<hbox>
+			<menulist id="opt_elStekl" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.elStekl.opt1;"/>
+				<menuitem value="1" label="&as.opts.elStekl.opt2;"/>
+				<menuitem value="2" label="&as.opts.elStekl.opt3;"/>
+				</menupopup>
+			</menulist>
+			<menulist id="opt_wheelAdj" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.wheelAdj.opt1;"/>
+				<menuitem value="1" label="&as.opts.wheelAdj.opt2;"/>
+				<menuitem value="2" label="&as.opts.wheelAdj.opt3;"/>
+				<menuitem value="3" label="&as.opts.wheelAdj.opt4;"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<hbox>
+			<menulist id="opt_drvSeat" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.drvSeat.opt1;"/>
+				<menuitem value="1" label="&as.opts.drvSeat.opt2;"/>
+				<menuitem value="2" label="&as.opts.drvSeat.opt3;"/>
+				<menuitem value="3" label="&as.opts.drvSeat.opt4;"/>
+				</menupopup>
+			</menulist>
+			<menulist id="opt_passSeat" name="option">
+				<menupopup>
+				<menuitem value="0" label="&as.opts.passSeat.opt1;"/>
+				<menuitem value="1" label="&as.opts.passSeat.opt2;"/>
+				<menuitem value="2" label="&as.opts.passSeat.opt3;"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<hbox>
+			<checkbox id="opt_obogSid" name="option" label="&as.opts.obogSid;"/>
+			<checkbox id="opt_ton" name="option" label="&as.opts.ton;"/>
+		</hbox>
+	</groupbox>
+</dialog>

@@ -1,0 +1,64 @@
+<!ENTITY as.opts.title "Фильтры по комплектации автомобиля">
+<!ENTITY as.opts.sec.title "Безопасность">
+<!ENTITY as.opts.abs "антиблокировочная система (ABS)">
+<!ENTITY as.opts.tcs "антипробуксовочная система (TCS)">
+<!ENTITY as.opts.esp "система курсовой стабилизации (ESP)">
+<!ENTITY as.opts.srs.opt1 "подушки не важны">
+<!ENTITY as.opts.srs.opt2 "водительская подушка">
+<!ENTITY as.opts.srs.opt3 "пассажирская подушка">
+<!ENTITY as.opts.srs.opt4 "фронтальные и боковые">
+<!ENTITY as.opts.ksen "ксеноновые фары">
+<!ENTITY as.opts.sec "охранная система">
+
+<!ENTITY as.opts.comf.title "Комфорт">
+<!ENTITY as.opts.gur.opt1 "усил. рул. управления не важен">
+<!ENTITY as.opts.gur.opt2 "гидроусилитель руля">
+<!ENTITY as.opts.gur.opt3 "электроусилитель руля">
+<!ENTITY as.opts.elZerk "электрозеркала">
+<!ENTITY as.opts.obogZerk "обогрев зеркал">
+<!ENTITY as.opts.omivFar "омыватель фар">
+<!ENTITY as.opts.park "парктроник">
+<!ENTITY as.opts.luk "люк">
+<!ENTITY as.opts.dd "датчик дождя">
+<!ENTITY as.opts.ds "датчик света">
+<!ENTITY as.opts.cond "кондиционер">
+<!ENTITY as.opts.cond.opt1 "кондиционер не важен">
+<!ENTITY as.opts.cond.opt2 "нужен кондиционер">
+<!ENTITY as.opts.cond.opt3 "-зонный климат контроль">
+<!ENTITY as.opts.cruize "круиз-контроль">
+<!ENTITY as.opts.pc "бортовой компьютер">
+<!ENTITY as.opts.cz "центральный замок">
+<!ENTITY as.opts.av.opt1 "магнитола не важна">
+<!ENTITY as.opts.av.opt2 "CD магнитола">
+<!ENTITY as.opts.av.opt3 "CD, навигация">
+<!ENTITY as.opts.av.opt4 "CD, навигация, ТВ">
+<!ENTITY as.opts.av.opt5 "кассетная магинтола">
+
+<!ENTITY as.opts.int.title "Салон">
+<!ENTITY as.opts.int.opt1 "cалон не важен">
+<!ENTITY as.opts.int.opt2 "велюровый салон">
+<!ENTITY as.opts.int.opt3 "кожаный салон">
+<!ENTITY as.opts.int.opt4 "комбинированный салон">
+<!ENTITY as.opts.int.opt5 "тканевый салон">
+<!ENTITY as.opts.intColor.opt1 "цвет салона не важен">
+<!ENTITY as.opts.intColor.opt2 "светлый салон">
+<!ENTITY as.opts.intColor.opt3 "тёмный салон">
+<!ENTITY as.opts.elStekl.opt1 "электростеклоподъемники не важны">
+<!ENTITY as.opts.elStekl.opt2 "все электростеклоподъемники">
+<!ENTITY as.opts.elStekl.opt3 "передние электростеклоподъемники">
+<!ENTITY as.opts.obogSid "обогрев сидений">
+<!ENTITY as.opts.drvSeat.opt1 "регулировка вод. сиденья не важна">
+<!ENTITY as.opts.drvSeat.opt2 "регулировка вод. сиденья: по высоте">
+<!ENTITY as.opts.drvSeat.opt3 "регулировка вод. сиденья: с памятью">
+<!ENTITY as.opts.drvSeat.opt4 "электропривод водител. сиденья">
+<!ENTITY as.opts.passSeat.opt1 "регулировка пас. сиденья не важна">
+<!ENTITY as.opts.passSeat.opt2 "регулировка пас. сиденья по высоте">
+<!ENTITY as.opts.passSeat.opt3 "электропривод пассаж. сиденья">
+<!ENTITY as.opts.wheelAdj.opt1 "регулировка руля не важна">
+<!ENTITY as.opts.wheelAdj.opt2 "регулировка руля в одной плоскости">
+<!ENTITY as.opts.wheelAdj.opt3 "регулировка руля в двух плоскостях">
+<!ENTITY as.opts.wheelAdj.opt4 "электропривод руля">
+
+<!ENTITY as.opts.gbo "газобаллонное оборудование (ГБО)">
+<!ENTITY as.opts.disks "легкосплавные диски">
+<!ENTITY as.opts.ton "тонированные стекла">

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://as/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://as/locale/overlay.dtd">
+<overlay id="as-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="as=new AS(); as.init();">
+  
+<script src="sidebar.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="as-strings" src="chrome://as/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="as-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+    label="&asToolbarButton.label;" tooltiptext="&asToolbarButton.tooltip;"
+    oncommand="toggleSidebar('viewSidebar_as');"/>
+  </toolbarpalette>
+
+  <menupopup id="viewSidebarMenu">
+    <menuitem key="key_openSidebar_as" observes="viewSidebar_as" />
+  </menupopup>
+
+  <keyset id="mainKeyset">
+	<!--<key id="key_openSidebar_as" command="viewSidebar_as" key="&asToolbar.commandkey;"/>-->
+	<key id="key_os" key="Ы" oncommand="toggleSidebar('viewSidebar_as');"/>
+	<key id="key_os_2" key="S" oncommand="toggleSidebar('viewSidebar_as');"/>
+	<key id="key_os_3" modifiers="accel alt" key="Ы" oncommand="toggleSidebar('viewSidebar_as');"/>
+	<key id="key_os_4" modifiers="accel alt" key="S" oncommand="toggleSidebar('viewSidebar_as');"/>
+  </keyset>
+
+  <broadcasterset id="mainBroadcasterSet">
+    <broadcaster id="viewSidebar_as"
+                 label="&asSidebar.label;"
+                 autoCheck="false"
+                 type="checkbox"
+                 group="sidebar"
+                 sidebarurl="chrome://as/content/ff-sidebar.xul"
+                 sidebartitle="&asSidebar.label;"
+                 oncommand="toggleSidebar('viewSidebar_as');" />
+  </broadcasterset>
+
+</overlay>
