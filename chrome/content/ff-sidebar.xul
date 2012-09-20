@@ -18,7 +18,7 @@
 		</hbox>
 		<hbox class="top">
 			<vbox class="left">
-				<menulist label="brand" id="brand" class="brand" oncommand="as.form.loadModels();" flex="1">
+				<menulist label="brand" id="brand" class="brand" oncommand="as.virt.form.loadModels();" flex="1">
 					<menupopup>
 					<menuitem value="0" label="&as.brand.every;"/>
 					<menuitem value="-1" label="&as.brand.russian;"/>
@@ -151,7 +151,7 @@
 					<menuitem value="780" label="ZX"/>
 					</menupopup>	
 				</menulist>
-				<html:select id="model" multiple="multiple" class="model" onchange="as.form.onModelsChange();">
+				<html:select id="model" multiple="multiple" class="model" onchange="as.virt.form.onModelsChange();">
 					<html:option value="0">&as.model.every;</html:option>
 				</html:select>
 			</vbox>
@@ -212,7 +212,7 @@
 						<menuitem value="31" label="&as.color.chernMe;"/>
 					</menupopup>
 				</menulist>
-				<menulist id="country" oncommand="as.form.loadRegions();">
+				<menulist id="country" oncommand="as.virt.form.loadRegions();">
 				<menupopup>		
 					<menuitem value="0" label="&as.country.every;"/>
 					<menuitem value="1" label="&as.country.rus;"/>
@@ -251,7 +251,7 @@
 					<menuitem value="31" label="&as.country.jap;"/>
 				</menupopup>
 				</menulist>
-				<html:select id="region_id" multiple="multiple" disabled="disabled" class="region" onchange="as.form.onRegionChange();">
+				<html:select id="region_id" multiple="multiple" disabled="disabled" class="region" onchange="as.virt.form.onRegionChange();">
 					<html:option value="0">&as.region_id.every;</html:option>
 				</html:select>
 				<menulist id="city_id" disabled="true">
@@ -264,7 +264,7 @@
 		<vbox class="quad">
 			<hbox id="year">
 				<label class="def" value="&as.year.label;" control="yFrom" tooltiptext="&as.year.hint;"/>
-				<menulist id="yFrom" class="year" control="yFrom" onselect="try{ as.form.yearToUpdate(); } catch(e){}" sizetopopup="always">
+				<menulist id="yFrom" class="year" control="yFrom" onselect="try{ as.virt.yearToUpdate(); } catch(e){}" sizetopopup="always">
 					<menupopup>
 					<menuitem label=" " value="0"></menuitem>
 					</menupopup>
@@ -275,43 +275,43 @@
 					<menuitem label=" " value="0"></menuitem>
 					</menupopup>
 				</menulist>
-				<spacer class="x" onclick="as.form.fields.yFrom.elem.selectedIndex = as.form.fields.yTo.elem.selectedIndex = 0;" tooltiptext="&as.year.clear;"/>
+				<spacer class="x" onclick="as.virt.fieldsObj.yFrom.elem.selectedIndex = as.virt.fieldsObj.yTo.elem.selectedIndex = 0;" tooltiptext="&as.year.clear;"/>
 			</hbox>
 			<hbox class="qSelect" id="quickYearsSelect">
-				<label flex="1" class="text-link" onclick="as.form.yearsSet(1,3);">&as.yars.set.1;</label>
-				<label flex="1" class="text-link" onclick="as.form.yearsSet(3,5);">&as.yars.set.2;</label>
-				<label flex="1" class="text-link" onclick="as.form.yearsSet(5,7);">&as.yars.set.3;</label>
-				<label flex="1" class="text-link" onclick="as.form.yearsSet(7,10);">&as.yars.set.4;</label>
+				<label flex="1" class="text-link" onclick="as.virt.form.yearsSet(1,3);">&as.yars.set.1;</label>
+				<label flex="1" class="text-link" onclick="as.virt.form.yearsSet(3,5);">&as.yars.set.2;</label>
+				<label flex="1" class="text-link" onclick="as.virt.form.yearsSet(5,7);">&as.yars.set.3;</label>
+				<label flex="1" class="text-link" onclick="as.virt.form.yearsSet(7,10);">&as.yars.set.4;</label>
 			</hbox>
 			<hbox id="price">
 				<label class="def" value="&as.price.label;" control="prFrom" tooltiptext="&as.price.hint;"/>
-				<menulist id="prFrom" control="prFrom" onkeyup="checkDigit(this);" onchange="as.form.priceToCheck();"  sizetopopup="always" editable="true">
+				<menulist id="prFrom" control="prFrom" onkeyup="checkDigit(this);" onchange="as.virt.form.priceToCheck();"  sizetopopup="always" editable="true">
 					<menupopup></menupopup>
 				</menulist>
 				<label class="btw" value="-" control="prTo"/>
-				<textbox id="prTo" control="prTo" onkeyup="checkDigit(this);" onchange="as.form.priceToCheck();"/>
-				<spacer class="x" onclick="as.form.fields.prFrom.elem.value = as.form.fields.prTo.elem.value = '';" tooltiptext="&as.price.clear;"/>
+				<textbox id="prTo" control="prTo" onkeyup="checkDigit(this);" onchange="as.virt.form.priceToCheck();"/>
+				<spacer class="x" onclick="as.virt.fieldsObj.prFrom.elem.value = as.virt.fieldsObj.prTo.elem.value = '';" tooltiptext="&as.price.clear;"/>
 			</hbox>
 			<hbox id="run">
 				<label class="def" value="&as.run.label;" control="runFrom" tooltiptext="&as.run.hint;"/>
 				<textbox id="runFrom" control="runFrom"  onkeyup="checkDigit(this);" />
 				<label class="btw" value="-" control="runTo" flex="0"/>
 				<textbox id="runTo" control="runTo" onkeyup="checkDigit(this);"/>
-				<spacer class="x" onclick="as.form.fields.runFrom.elem.value=as.form.fields.runTo.elem.value='';" tooltiptext="&as.run.clear;"/>
+				<spacer class="x" onclick="as.virt.fieldsObj.runFrom.elem.value=as.virt.fieldsObj.runTo.elem.value='';" tooltiptext="&as.run.clear;"/>
 			</hbox>
 			<hbox id="volume">
 				<label class="def" value="&as.volume.label;" control="volFrom" tooltiptext="&as.volume.hint;"/>
 				<textbox id="volFrom" control="volTo" onkeyup="checkDigit(this);"/>
 				<label class="btw" value="-" control="volTo" flex="0"/>
 				<textbox id="volTo" control="volTo" onkeyup="checkDigit(this);"/>
-				<spacer class="x" onclick="as.form.fields.volFrom.elem.value=as.form.fields.volTo.elem.value='';" tooltiptext="&as.volume.clear;"/>
+				<spacer class="x" onclick="as.virt.fieldsObj.volFrom.elem.value=as.virt.fieldsObj.volTo.elem.value='';" tooltiptext="&as.volume.clear;"/>
 			</hbox>
 			<hbox id="power">
 				<label class="def" value="&as.power.label;" control="powFrom" tooltiptext="&as.power.hint;"/>
 				<textbox id="powFrom" control="powFrom" onkeyup="checkDigit(this);"/>
 				<label class="btw" value="-" control="powTo" flex="0"/>
 				<textbox id="powTo" control="powTo" onkeyup="checkDigit(this);"/>
-				<spacer class="x" onclick="as.form.fields.powFrom.elem.value=as.form.fields.powTo.elem.value='';" tooltiptext="&as.power.clear;"/>
+				<spacer class="x" onclick="as.virt.fieldsObj.powFrom.elem.value=as.virt.fieldsObj.powTo.elem.value='';" tooltiptext="&as.power.clear;"/>
 			</hbox>
 		</vbox>	
 		<box class="doub">
@@ -458,7 +458,7 @@
 		</hbox>
 		<vbox class="menu" align="right">
 			<label class="text-link" onclick="as.virt.saveAsDefaults();" value="&as.saveAsDefaults;" tooltiptext="&as.saveAsDefaults.hint;"/>
-			<label class="text-link" onclick="addButton();" value="проверка кнопки"/>
+			<!--<label class="text-link" onclick="as.virt.r_id=1;" value="проверка кнопки"/>-->
 		</vbox>
 	</vbox>
 	</tabpanel>
@@ -473,23 +473,27 @@
 <script src="list.js" type="application/javascript;version=1.7"/>
 <script src="form.js" type="application/javascript;version=1.7"/>
 <script src="virt.js" type="application/javascript;version=1.7"/>
+<script src="debug.js" type="application/javascript;version=1.7"/>
 <script>
 	window.addEventListener("load", function (){
-		if (typeof as == 'undefined'){
-		window.as = new AS();
-		as.initBar();
-		as.virt = new Virt(as);
-		as.virt.init();
-		as.form = new Form(as);
-		as.form.init(as.virt.fields);
-		as.virt.db2form(999)}
-		else {alert('Автопоиск не может работать из-за занятой переменной "as".\nНапишите об этом на as@icode.ru с приложенным перечнем установленных плагинов.\nСпасибо.');}
-		})
-	window.addEventListener("unload", function(){
-		if (typeof(as) != 'undefined') { if (as.virt) {
-			as.virt.onClose()
-			as.cons.logStringMessage('нормально закрыли панель')}
+		if (typeof as === 'undefined'){
+			window.as = new AS();
+			as.init();
+			as.virt = new virt();
+			as.virt.init();
 			}
-		})
+		else {
+			alert('Автопоиск не может работать из-за занятой переменной "as".\nНапишите об этом на as@icode.ru с приложенным перечнем установленных плагинов.\nСпасибо.');
+			}
+		});
+	
+	window.addEventListener("unload", function(){
+		if (typeof(as) !== 'undefined') {
+			if (as.virt) {
+				as.virt.onClose();
+				as.cons.logStringMessage('нормально закрыли панель');
+				}
+			}
+		});
 </script>
 </page>
