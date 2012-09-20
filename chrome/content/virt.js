@@ -51,23 +51,6 @@ function virt (){
 		if(closedId) { self.r_id = closedId; }
 		}
 	
-	/*this.reload = function(){
-		var
-			tmpName = this.name,
-			tmpId = this.r_id;
-		this.init();
-		this.r_id = tmpId;
-		this.name = this.tmpName;
-		}*/
-	
-	convertFieldsFromArr2objects = function (){
-		var i;
-		for (i = 0; i < self.fields.length; i++){
-			self.fields[i] = new Field (self.fields[i]);
-			fieldsObj[self.fields[i].name] = self.fields[i];
-			}
-		}
-	
 	this.search = function(){
 		form2virt();
 		this.virt2get();
@@ -78,25 +61,25 @@ function virt (){
 		getName();
 		if(this.name)	{ virt2db(); }
 		}
-		
-	saveTo = function (id) {
-		var tmpId = self.r_id;
-		form2virt();
-		self.r_id = id;
-		virt2db();
-		self.r_id = tmpId;
-		}
-		
+
 	this.saveAsDefaults = function() {
 		var confirm = window.confirm("Значения по умолчанию используются при сбросе формы и для \"скрытых\" полей.\r\nСохранить текущие значения полей формы как значения по умолчанию?")
 		if (confirm) { this.saveTo(defaultsId); }
 		}
 	
-	form2virt = function(){
-		var i;
-		for (i = 0; i<self.fields.length; i++){ self.fields[i].fromForm(); }
+	this.virt2get = function(){
+		var getReq = 'http://cars.auto.ru/list/?category_id=15&section_id=1', i, str;
+		for (i = 0; i<this.fields.length; i++) {
+			str = this.fields[i].toGet();
+			if (this.parseBeforeGet[this.fields[i].name] && this.parseBeforeGet[this.fields[i].name][this.fields[i].value]){ 
+				str = '&' + this.fields[i].getName + '=' + this.parseBeforeGet[this.fields[i].name][this.fields[i].value];
+				}//костыль для значений автору, отличных от родной формы
+			getReq += str;
+			};
+		//as.cons.logStringMessage(getReq)
+		//showResults(getReq)
 		}
-	
+
 	this.db2virt = function (res){
 		function getAndSetAutoSavedId(res){
 			var row = res.getNextRow();
@@ -120,7 +103,73 @@ function virt (){
 		for (i = 0; i<self.fields.length; i++){ self.fields[i].fromDB(row.getResultByName(self.fields[i].dbName)); }
 		//as.cons.logStringMessage(this.fields[i].name+' ('+row.getResultByName(this.fields[i].dbName)+') = '+this.fields[i].value)
 		}
+	
+	this.db2get = function (id){
+		var statement = as.db.createStatement("SELECT sl.r_name as name,  s.* FROM `searches` as s, `search_list` as sl WHERE s.r_id=:id LIMIT 1;");
+		this.r_id = statement.params.id = id;
+		statement.executeAsync({
+			handleResult: function(aResultSet){as.virt.db2virt(aResultSet);},
+			handleError: function(aError) { print("Error: " + aError.message) },
+			handleCompletion: function(aReason) {
+				if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED)	print("Query canceled or aborted!")
+				as.virt.virt2get()
+				}
+			})
+		}
+
+	this.db2form = function (id){
+		var	
+			statement = as.db.createStatement("SELECT sl.r_name as name,  s.* FROM `searches` as s LEFT JOIN `search_list` as sl ON s.r_id = sl.r_id WHERE s.r_id=:id LIMIT 1;");
+		statement.params.id = id;
+		statement.executeAsync({
+			handleResult: function(aResultSet){ as.virt.db2virt(aResultSet); },
+			handleError: function(aError){ as.cons.logStringMessage("Error: " + aError.message); },
+			handleCompletion: function(aReason) {
+				if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED){
+					as.cons.logStringMessage("Query canceled or aborted!");
+					}
+				virt2form();
+				document.getElementById('tabs').selectedIndex = 0;
+				}
+			})
+		}
+
+	this.onClose = function(){
+		if(+self.r_id){
+			as.cons.logStringMessage('as.virt.onClose - записываем закрываемый id "' + self.r_id + '"');
+			closedId.value = self.r_id.toString();
+			}
+		else{ closedId.value = autoSaveId; }
+
+		saveTo(autoSaveId);
+		}
+	
+	this.updReqCallBack = {
+		handleResult: function(aResultSet) {},
+		handleError: function(aError) { alert("Error: " + aError.message) },
+		handleCompletion: function(aReason) {}}
+	
+	saveTo = function (id) {
+		var tmpId = self.r_id;
+		form2virt();
+		self.r_id = id;
+		virt2db();
+		self.r_id = tmpId;
+		}
+
+	convertFieldsFromArr2objects = function (){
+		var i;
+		for (i = 0; i < self.fields.length; i++){
+			self.fields[i] = new Field (self.fields[i]);
+			fieldsObj[self.fields[i].name] = self.fields[i];
+			}
+		}
 		
+	form2virt = function(){
+		var i;
+		for (i = 0; i<self.fields.length; i++){ self.fields[i].fromForm(); }
+		}
+	
 	virt2form = function(){
 	var i;
 		for (i = 0; i<self.fields.length; i++)
@@ -140,19 +189,6 @@ function virt (){
 				}
 		}
 	
-	this.virt2get = function(){
-		var getReq = 'http://cars.auto.ru/list/?category_id=15&section_id=1', i, str;
-		for (i = 0; i<this.fields.length; i++) {
-			str = this.fields[i].toGet();
-			if (this.parseBeforeGet[this.fields[i].name] && this.parseBeforeGet[this.fields[i].name][this.fields[i].value]){ 
-				str = '&' + this.fields[i].getName + '=' + this.parseBeforeGet[this.fields[i].name][this.fields[i].value];
-				}//костыль для значений автору, отличных от родной формы
-			getReq += str;
-			};
-		//as.cons.logStringMessage(getReq)
-		//showResults(getReq)
-		}
-
 	virt2db = function(){
 		function lastInsertRowId(res) {	
 			row = res.getNextRow();
@@ -202,36 +238,6 @@ function virt (){
 				})
 			}
 		}
-	
-	this.db2get = function (id){
-		var statement = as.db.createStatement("SELECT sl.r_name as name,  s.* FROM `searches` as s, `search_list` as sl WHERE s.r_id=:id LIMIT 1;");
-		this.r_id = statement.params.id = id;
-		statement.executeAsync({
-			handleResult: function(aResultSet){as.virt.db2virt(aResultSet);},
-			handleError: function(aError) { print("Error: " + aError.message) },
-			handleCompletion: function(aReason) {
-				if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED)	print("Query canceled or aborted!")
-				as.virt.virt2get()
-				}
-			})
-		}
-
-	this.db2form = function (id){
-		var	
-			statement = as.db.createStatement("SELECT sl.r_name as name,  s.* FROM `searches` as s LEFT JOIN `search_list` as sl ON s.r_id = sl.r_id WHERE s.r_id=:id LIMIT 1;");
-		statement.params.id = id;
-		statement.executeAsync({
-			handleResult: function(aResultSet){ as.virt.db2virt(aResultSet); },
-			handleError: function(aError){ as.cons.logStringMessage("Error: " + aError.message); },
-			handleCompletion: function(aReason) {
-				if (aReason != Components.interfaces.mozIStorageStatementCallback.REASON_FINISHED){
-					as.cons.logStringMessage("Query canceled or aborted!");
-					}
-				virt2form();
-				document.getElementById('tabs').selectedIndex = 0;
-				}
-			})
-		}
 
 	getName = function(){
 		var name = this.r_name;
@@ -246,16 +252,6 @@ function virt (){
 		catch (err){ alert('Фильтр не сохранён.'); this.name = false; }
 		}
 
-	this.onClose = function(){
-		if(+self.r_id){
-			as.cons.logStringMessage('as.virt.onClose - записываем закрываемый id "' + self.r_id + '"');
-			closedId.value = self.r_id.toString();
-			}
-		else{ closedId.value = autoSaveId; }
-
-		saveTo(autoSaveId);
-		}
-	
 	db2defVals = function (){//загружаем default значения в массив fields
 		var i, stm = as.db.createStatement("SELECT * FROM `searches` WHERE r_id=997 LIMIT 1;");
 		stm.executeStep();
@@ -266,10 +262,6 @@ function virt (){
 			}
 		}
 	
-	this.updReqCallBack = {
-		handleResult: function(aResultSet) {},
-		handleError: function(aError) { alert("Error: " + aError.message) },
-		handleCompletion: function(aReason) {}}
 	}
 
 function Field (arr) {
@@ -282,7 +274,7 @@ function Field (arr) {
 	this.display = true;
 	this.hideType = arr[4];
 	this.defVal = arr[5];
-	this.onForm = this.elem ? true : false;
+	var onForm = this.elem ? true : false;
 	//as.cons.logStringMessage('AS.field.value '+this.name+' = '+this.value)
 
 	try {
@@ -315,7 +307,7 @@ function Field (arr) {
 				}
 			this.fromForm = function () {
 				var i;
-				this.value = Array()
+				this.value = [];
 				for (i = 0; i<this.elem.options.length; i++)
 					if(this.elem.options[i].selected == true) {
 						this.value.push(this.elem.options[i].value)
@@ -350,7 +342,7 @@ function Field (arr) {
 		this.fromDB = function (val) { this.fromDBcommon(this.defVal); }
 		}
 		
-	if(!this.onForm){// используется для полей в окне опций
+	if(!onForm){// используется для полей в окне опций
 		this.toFormHidden = this.toForm;
 		this.fromFormHidden = this.fromForm;
 		this.toForm = this.fromForm = function() {};

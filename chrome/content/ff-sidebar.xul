@@ -264,7 +264,7 @@
 		<vbox class="quad">
 			<hbox id="year">
 				<label class="def" value="&as.year.label;" control="yFrom" tooltiptext="&as.year.hint;"/>
-				<menulist id="yFrom" class="year" control="yFrom" onselect="try{ as.virt.yearToUpdate(); } catch(e){}" sizetopopup="always">
+				<menulist id="yFrom" class="year" control="yFrom" onselect="try{ as.virt.form.yearToUpdate(); } catch(e){}" sizetopopup="always">
 					<menupopup>
 					<menuitem label=" " value="0"></menuitem>
 					</menupopup>
